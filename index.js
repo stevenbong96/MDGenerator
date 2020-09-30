@@ -11,11 +11,6 @@ inquirer.prompt([
         message:"What is your project title?"
     },
     {
-        name:"tableContents",
-        type:"input",
-        message:"Put your table of contents"
-    },
-    {
         name:"description",
         type:"input",
         message:"Describe your project"
@@ -36,7 +31,7 @@ inquirer.prompt([
         message:"Provide contribution guidelines"
     },
     {
-        name:"test",
+        name:"testinstruction",
         type:"input",
         message:"Provide test instructions"
     },
@@ -44,7 +39,7 @@ inquirer.prompt([
         name:"license",
         type:"list",
         message:"Select your preferred license",
-        choices: ["GNU AGPLv3", "GNU GPLv3", "GNU LGPLv3", "Mozilla Public License 2.0", "Apache License 2.0", "MIT License", "Boost Software License 1.0", "The Unlicense"]
+        choices: ["GNU AGPLv3", "GNU GPLv3", "GNU LGPLv3", "Mozilla Public License", "Apache 2.0", "MIT", "Boost Software 1.0", "The Unlicense"]
     },
     {
         name:"username",
@@ -77,15 +72,6 @@ inquirer.prompt([
     })
 })
 
-var test = {
-    title: "test",
-}
-
-// array of questions for user
-// const questions = [
-
-// ];
-
 // function to write README file
 function writeToFile(fileName, data) {
     // fsFile.writeFile(fileName, JSON.stringify(data), function(err){
@@ -96,10 +82,3 @@ function writeToFile(fileName, data) {
     // })
 }
 
-// function to initialize program
-// function init() {
-
-// }
-
-// function call to initialize program
-// init();
