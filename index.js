@@ -1,11 +1,12 @@
 // Declare the npm variables
 var inquirer = require ("inquirer");
 var fsFile = require("fs");
+var generateMarkdown = require("./utils/generateMarkdown");
 
 // Declare the prompt for users
 inquirer.prompt([
     {
-        name:"projectTitle",
+        name:"title",
         type:"input",
         message:"What is your project title?"
     },
@@ -68,7 +69,7 @@ inquirer.prompt([
     },
 ]).then(function(response){
     console.log(response);
-    fsFile.writeFile("READMEGenerator.md", JSON.stringify(response,null,2), function(err){
+    fsFile.writeFile("READMEGenerator.md", generateMarkdown(response), function(err){
         if(err){
             throw err
         }
@@ -76,10 +77,14 @@ inquirer.prompt([
     })
 })
 
-// array of questions for user
-const questions = [
+var test = {
+    title: "test",
+}
 
-];
+// array of questions for user
+// const questions = [
+
+// ];
 
 // function to write README file
 function writeToFile(fileName, data) {
@@ -92,9 +97,9 @@ function writeToFile(fileName, data) {
 }
 
 // function to initialize program
-function init() {
+// function init() {
 
-}
+// }
 
 // function call to initialize program
-init();
+// init();
