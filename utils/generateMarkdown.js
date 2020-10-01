@@ -2,13 +2,14 @@
 
 // function to generate markdown for README
 function generateMarkdown(response) {
+  // console.log(response)
   // for(i=0;i<5;i++){
   //   console.log(i);
   //   if(response.license === "MIT"){
   //     var licenseMIT = `{}`
   //   }
   // }
-  console.log(response)
+  
   return `# ${response.title}
 
     ## Description 
