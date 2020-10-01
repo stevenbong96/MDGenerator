@@ -28,19 +28,16 @@ function generateMarkdown(data) {
   ${data.contribution}
 
   ## Test Instruction  
-  ${data.testintruction}
+  ${data.testinstruction}
 
   ## License 
   ![Badge for License](https://img.shields.io/github/${data.license}/${data.username}/${data.githubRepo}?color=green)
 
-  ## Username 
-  ${data.username}
+  ## Profile 
+  ![Github Profile Picture]
+  Github username: @${data.username}
 
-  ## Github Repository  
-  ${data.githubRepo}
-
-  ## Method Communication 
-  ${data.methodCommunication}
+  If you have any questions, feel free to ${data.methodCommunication} at ${data.email}
 `;
 }
 
