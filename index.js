@@ -3,6 +3,7 @@ var inquirer = require ("inquirer");
 var fsFile = require("fs");
 var generateMarkdown = require("./utils/generateMarkdown");
 var axios = require("axios");
+var getInfo = require("./utils/githubAPI")
 
 // Declare the prompt for users
 // inquirer.prompt([
@@ -72,8 +73,22 @@ var axios = require("axios");
 //         console.log("Success!!");
 //     })
 // })
+// let objData = {};
 
 inquirer.prompt([
+    {
+        name:"username",
+        message:"What is your Github username?"
+    }
+    ]).then(function(APICall){
+        return getInfo.getInfo(APICall.username)
+    }).then(function(apiRes){
+    inquirer.prompt([ 
+    {
+        name:"githubRepo",
+        type:"input",
+        message:"What is your Github repo?"
+    },
     {
         name:"title",
         type:"input",
@@ -111,17 +126,7 @@ inquirer.prompt([
         choices: ["GNU AGPLv3", "GNU GPLv3", "GNU LGPLv3", "Mozilla Public License", "Apache 2.0", "MIT", "Boost Software 1.0", "The Unlicense"]
     },
     {
-        name:"username",
-        type:"input",
-        message:"What is your Github username?"
-    },
-    {
-        name:"githubRepo",
-        type:"input",
-        message:"What is your Github repo?"
-    },
-    {
-        name:"githubRepo",
+        name:"email",
         type:"input",
         message:"What is your email address?"
     },
@@ -132,20 +137,12 @@ inquirer.prompt([
         choices:["Email", "Text Message", "Phone"]
     },
 ]).then(function(response){
-    console.log(response);
-    const githubAPIUrl = `ttps://api.github.com/users/` + response.username;
-    axios
-    .get(githubAPIUrl)
-    .then(function(resp){
-        console.log(resp.data)
-        console.log(resp.data.location);
-        console.log(resp.data.avatar_url);
-        // fsFile.writeFile("READMEGenerator.md", generateMarkdown(resp), function(err){
-        //     if(err){
-        //         throw err
-        //     }
-        //     console.log("Success!!");
-        // })
+    // console.log(response);
+    fsFile.writeFile("READMEGenerator.md", generateMarkdown({...apiRes, ...response}), function(err){
+        if(err){
+            throw err
+        }
+        console.log("Success!!");
     })
 })
-
+    })

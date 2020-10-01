@@ -1,44 +1,50 @@
+// const api = require("../index");
+
 // function to generate markdown for README
-function generateMarkdown(data) {
+function generateMarkdown(response) {
   // for(i=0;i<5;i++){
   //   console.log(i);
-  //   if(data.license === "MIT"){
+  //   if(response.license === "MIT"){
   //     var licenseMIT = `{}`
   //   }
   // }
+  console.log(response)
+  return `# ${response.title}
 
-  return `# ${data.title}
+    ## Description 
+    ${response.description}
+    
+    ## Table of Contents
+    * [Installation](#installation)
+    * [Usage](#usage)
+    * [Credits](#credits)
+    * [License](#license)
 
-  ## Description 
-  ${data.description}
-  
-  ## Table of Contents
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [Credits](#credits)
-  * [License](#license)
+    ## Installation 
+    ${response.installation}
+    
+    ## Usage 
+    ${response.usage}
+    
+    ## Contributions
+    [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md) 
+    
+    https://img.shields.io/github/contributors/${response.username}/${response.githubRepo}
+    ${response.contribution}
 
-  ## Installation 
-  ${data.installation}
-  
-  ## Usage 
-  ${data.usage}
-  
-  ## Contributions 
-  ${data.contribution}
+    ## Test Instruction  
+    ${response.testinstruction}
 
-  ## Test Instruction  
-  ${data.testinstruction}
+    ## License 
+    ![Badge for License](https://img.shields.io/github/${response.license}/${response.username}/${response.githubRepo}?color=green)
 
-  ## License 
-  ![Badge for License](https://img.shields.io/github/${data.license}/${data.username}/${data.githubRepo}?color=green)
+    ## Profile 
+    ![Github Profile Picture] ${response.picture}
+    Github username: @${response.username}
 
-  ## Profile 
-  ![Github Profile Picture]
-  Github username: @${data.username}
+    If you have any questions, feel free to ${response.methodCommunication} at ${response.email}
+  `;
 
-  If you have any questions, feel free to ${data.methodCommunication} at ${data.email}
-`;
 }
 
 module.exports = generateMarkdown;
