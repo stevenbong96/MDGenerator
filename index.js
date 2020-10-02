@@ -71,7 +71,7 @@ inquirer.prompt([
     },
 ]).then(function(response){
     // console.log(response);
-    fsFile.writeFile("READMEGenerator.md", generateMarkdown({...apiRes, ...response}), function(err){
+    fsFile.writeFile("README.md", generateMarkdown({...apiRes, ...response}), function(err){
         if(err){
             throw err
         }
