@@ -1,15 +1,14 @@
-// const api = require("../index");
-
 // function to generate markdown for README
 function generateMarkdown(response) {
-  // console.log(response)
-  // for(i=0;i<5;i++){
-  //   console.log(i);
-  //   if(response.license === "MIT"){
-  //     var licenseMIT = `{}`
-  //   }
-  // }
-  
+  // Conditional statement for method communication
+  if(response.methodCommunication === "email"){
+    response.email = response.email
+  } else {
+    response.methodCommunication = "reach me"
+    response.email = response.phone
+  }
+
+  // Creating the .md file dynamically
   return `
   # ${response.title}
 
@@ -28,12 +27,13 @@ function generateMarkdown(response) {
 
   ## Usage 
   ${response.usage}
-    
+  
+  ![Example Instructions](./questionsprompt.JPG)
+
   ## Contributions
   [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md) 
 
-  Total Contributors
-  ![Contributors Badge](https://img.shields.io/github/contributors/${response.username}/${response.githubRepo})
+  ![Contributors Badge](https://img.shields.io/github/contributors/${response.username}/${response.githubRepo}?label=Total%20Contributors)
 
   Language Contributions
   ![Top Languages](https://img.shields.io/github/languages/top/${response.username}/${response.githubRepo})
@@ -44,7 +44,7 @@ function generateMarkdown(response) {
   ${response.testinstruction}
 
   ## License 
-  ![Badge for License](https://img.shields.io/github/${response.license}/${response.username}/${response.githubRepo}?color=green)
+  ${response.license}
 
   ## Questions 
   ![Github Profile Picture](${response.picture})
@@ -59,4 +59,4 @@ function generateMarkdown(response) {
 module.exports = generateMarkdown;
 
 // ${data.license}
-// ![Badge for License](https://img.shields.io/github/license/stevenbong96/MDGenerator?color=green)
+// ![Badge for License](https://img.shields.io/github/${response.license}/${response.username}/${response.githubRepo}?color=green)

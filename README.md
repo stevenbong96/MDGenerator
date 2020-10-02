@@ -16,12 +16,13 @@
 
   ## Usage 
   The main use of this README Generator is to generate a template layout for users whenever they want to create a new repository for their assignments, homeworks, or even projects. With node.js, the template can be easily built by JavaScript to ease the user in creating the README layout. The screenshot on how to use the generator shown as below:
-    
+  
+  ![Example Instructions](./questionsprompt.JPG)
+
   ## Contributions
   [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md) 
 
-  Total Contributors
-  ![Contributors Badge](https://img.shields.io/github/contributors/stevenbong96/MDGenerator)
+  ![Contributors Badge](https://img.shields.io/github/contributors/stevenbong96/MDGenerator?label=Total%20Contributors)
 
   Language Contributions
   ![Top Languages](https://img.shields.io/github/languages/top/stevenbong96/MDGenerator)
@@ -32,7 +33,7 @@
   To use this generator, feel free to clone this repo to your local computer using terminal(MacOS) / GitBash (Windows). Then, open the file and right click "Open in Integrated Terminal" where you will be directed to your own inbuilt terminal. Type "node index.js" to run the generator and it will pop series of questions that you need to answer until the end.
 
   ## License 
-  ![Badge for License](https://img.shields.io/github/MIT/stevenbong96/MDGenerator?color=green)
+  MIT License
 
   ## Questions 
   ![Github Profile Picture](https://avatars1.githubusercontent.com/u/69608772?v=4)

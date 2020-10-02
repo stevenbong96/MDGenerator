@@ -56,12 +56,17 @@ inquirer.prompt([
         name:"license",
         type:"list",
         message:"Select your preferred license",
-        choices: ["GNU AGPLv3", "GNU GPLv3", "GNU LGPLv3", "Mozilla Public License", "Apache 2.0", "MIT", "Boost Software 1.0", "The Unlicense"]
+        choices: ["GNU AGPLv3", "GNU GPLv3", "GNU LGPLv3", "Mozilla Public License", "Apache 2.0", "MIT License", "Boost Software 1.0", "Unlicense"]
     },
     {
         name:"email",
         type:"input",
         message:"What is your email address?"
+    },
+    {
+        name:"phone",
+        type:"input",
+        message:"What is your phone number?"
     },
     {
         name:"methodCommunication",
