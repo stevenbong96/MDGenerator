@@ -44,6 +44,8 @@ function generateMarkdown(response) {
   ${response.testinstruction}
 
   ## License 
+  This is the section where you will put the license that you have been using to create your HW, projects, or assignments
+  
   ${response.license}
 
   ## Questions 

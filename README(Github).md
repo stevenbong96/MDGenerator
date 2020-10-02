@@ -16,3 +16,5 @@ Usage: The main use of this README Generator is to generate a template layout fo
 Contribution: This page for people who has contributed to the project/HW/assignments of this repo. You want to declare them for their contribution in this section. You can list all of their names and create badges for their commitments or you can reference their name only or even you want to share total languages contributions that all of you have made or this repository. It's totally up to you.
 
 Test Instruction: To use this generator, feel free to clone this repo to your local computer using terminal(MacOS) / GitBash (Windows). Then, open the file and right click "Open in Integrated Terminal" where you will be directed to your own inbuilt terminal. Type "node index.js" to run the generator and it will pop series of questions that you need to answer until the end.
+
+License: This is the section where you will put the license that you have been using to create your HW, projects, or assignments

@@ -1,5 +1,5 @@
 
-  # README Generator using Node.js
+  # README Generator using node.js
 
   ## Description 
   The objective of this HW is to create the README generator for the users whenever they made a new repository for their specific task and it can be projects, homeworks, assignments, etc. This README generator is really user friendly and can generate the template without laying out by yourself. The template that has been layed out is a standard template and can be modified by user's desired based on their own objective.
@@ -33,6 +33,8 @@
   To use this generator, feel free to clone this repo to your local computer using terminal(MacOS) / GitBash (Windows). Then, open the file and right click "Open in Integrated Terminal" where you will be directed to your own inbuilt terminal. Type "node index.js" to run the generator and it will pop series of questions that you need to answer until the end.
 
   ## License 
+  This is the section where you will put the license that you have been using to create your HW, projects, or assignments
+  
   MIT License
 
   ## Questions 
