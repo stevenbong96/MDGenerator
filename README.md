@@ -16,8 +16,6 @@
 
   ## Usage 
   The main use of this README Generator is to generate a template layout for users whenever they want to create a new repository for their assignments, homeworks, or even projects. With node.js, the template can be easily built by JavaScript to ease the user in creating the README layout. The screenshot on how to use the generator shown as below:
-  
-  ![Example Instructions](./questionsprompt.JPG)
 
   ![Generator GIF Demo](demo.gif)
   
