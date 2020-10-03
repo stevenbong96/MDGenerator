@@ -40,6 +40,8 @@ function generateMarkdown(response) {
   
   ${response.contribution}
 
+  To use the badges, feel free to check [shields.io](https://shields.io/) website for variety of badges
+  
   ## Test Instruction  
   ${response.testinstruction}
 

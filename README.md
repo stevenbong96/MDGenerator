@@ -1,5 +1,5 @@
 
-  # README Generator using node.js
+  # README Generator using Node.js
 
   ## Description 
   The objective of this HW is to create the README generator for the users whenever they made a new repository for their specific task and it can be projects, homeworks, assignments, etc. This README generator is really user friendly and can generate the template without laying out by yourself. The template that has been layed out is a standard template and can be modified by user's desired based on their own objective.
@@ -22,13 +22,15 @@
   ## Contributions
   [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md) 
 
-  ![Contributors Badge](https://img.shields.io/github/contributors/stevenbong96/MDGenerator?label=Total%20Contributors)
+  ![Contributors Badge](https://img.shields.io/github/contributors/stevenbong96/MDgenerator?label=Total%20Contributors)
 
   Language Contributions
-  ![Top Languages](https://img.shields.io/github/languages/top/stevenbong96/MDGenerator)
+  ![Top Languages](https://img.shields.io/github/languages/top/stevenbong96/MDgenerator)
   
   This page for people who has contributed to the project/HW/assignments of this repo. You want to declare them for their contribution in this section. You can list all of their names and create badges for their commitments or you can reference their name only or even you want to share total languages contributions that all of you have made or this repository. It's totally up to you.
 
+  To use the badges, feel free to check [shields.io](https://shields.io/) website for variety of badges
+  
   ## Test Instruction  
   To use this generator, feel free to clone this repo to your local computer using terminal(MacOS) / GitBash (Windows). Then, open the file and right click "Open in Integrated Terminal" where you will be directed to your own inbuilt terminal. Type "node index.js" to run the generator and it will pop series of questions that you need to answer until the end.
 
